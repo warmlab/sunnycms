@@ -1,0 +1,14 @@
+.my-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+/*
+color: #bd077e;
+color: #c10780;
+
+color: #f78c60;
+color: #7360f7;
+*/
