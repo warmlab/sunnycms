@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block main_body -%}
+    {%- for job in jobs %}
+    <article class="card">
+        <header class="card-header">
+            <h3 class="card-title"><i class="newspaper outline icon"></i>{{job.name}}</h3>
+        </header>
+        <div class="card-body">
+            <div>
+                <h4>薪资范围</h4>
+            <p>{% if job.salary_from %}{{job.salary_from}}-{{job.salary_to}}元/月{% else %}面议{% endif %}</p>
+            </div>
+            <div>
+                <h4>工作职责</h4>
+                <p>{{job.duty|safe}}</p>
+            </div>
+            <div>
+                <h4>工作描述</h4>
+                <p>{{job.summary|safe}}</p>
+            </div>
+            <div>
+                <h4>工作所需技能</h4>
+                <p>{{job.skills|safe}}</p>
+            </div>
+        </div>
+    </article>
+    {%- endfor %}
+{%- endblock %}
+{% block inline_script -%}
+<script>
+    $(document).ready(function() {
+        activeMenuItem(3)
+    })
+</script>
+{%- endblock %}

@@ -1,0 +1,19 @@
+pycrypt>=0.7
+psycopg2-binary>=2.7
+itsdangerous>=1.1
+sqlalchemy>=1.2
+
+flask>=1.0
+flask-cli>=0.4
+flask-sqlalchemy>=2.3.2
+flask-migrate>=2.3
+flask-mail>=0.9
+flask-restful>=0.3
+#flask-login>=0.4
+flask-security>=3.0
+flask-wtf>=0.14
+flask-admin>=1.5
+flask-sslify>=0.1
+
+# for develop environment
+pylint>=2.2

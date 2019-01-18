@@ -1,0 +1,33 @@
+<header class="header collapse d-lg-flex p-0 bg-dark" id="headerMenuCollapse">
+    <nav class="col-lg order-lg-first">
+        <ul class="nav nav-tabs border-0 flex-column flex-lg-row" id="menu">
+            <li class="nav-item">
+                <a href="/" class="nav-link" index="0"><i class="fe fe-home"></i> 首页</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false" index="1"><i class="fe fe-box"></i>
+                    阳光服务</a>
+                <div class="dropdown-menu dropdown-menu-arrow">
+                    {%- for app in corporation.apps %}
+                    <a href="/appraisal?type={{app.id}}" class="dropdown-item">{{app.name}}</a>
+                    {%- endfor %}
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/achievements" class="nav-link" index="2"><i class="fe fe-star"></i>
+                    阳光业绩</a>
+            </li>
+            <li class="nav-item">
+                <a href="/joinin" class="nav-link" index="3"><i class="fe fe-user"></i>
+                    加入阳光</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script>
+    var activeMenuItem = function(index) {
+        $('#menu li').children('a').removeClass('active')
+        $('#menu li a[index='+index+']').addClass('active')
+    }
+</script>

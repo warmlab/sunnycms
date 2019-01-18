@@ -1,0 +1,12 @@
+{% extends "base.html" -%}
+{% block page_title -%}<title>关于我们</title>{%- endblock %}
+{% block banner -%}
+{%- endblock %}
+{% block main_body -%}
+    <section class="ui vertical stripe segment">
+        <div class="ui text container">
+            <h3 class="ui header"><i class="user outline icon"></i>{{corporation.name}}</h3>
+            <p>{% if corporation.note %}{{corporation.note|safe}}{% endif %}</p>
+        </div>
+    </section>
+{%- endblock %}

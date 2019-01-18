@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%- block banner -%}
+{%- endblock -%}
+{% block main_body -%}
+{%- for post in posts %}
+    <article class="card">
+        <h3 class="card-header"><i class="newspaper outline icon"></i>{{post.title}}</h3>
+        <section class="card-body">
+            <p>{{post.summary}}</p>
+        </section>
+        <section class="card-footer text-right">
+            <a class="ui large button" href="/post?id={{post.id}}">阅读更多</a>
+        </section>
+    </article>
+{%- endfor %}
+{%- endblock %}
+{%- block inline_script %}
+<script>
+    $(document).ready(function() {
+        activeMenuItem(2)
+    })
+</script>
+{%- endblock %}

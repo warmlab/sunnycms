@@ -102,3 +102,16 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# vs code
+.vscode
+
+# db migration
+migrations
+
+# static is just for develop enviroment
+app/static
+
+# on macOS and Windows
+.DS_Store
+#thumb

@@ -1,0 +1,31 @@
+{%- extends "base.html" %}
+{% block page_title %}<title>评估您想要的</title>{% endblock %}
+{% block banner -%}
+{%- endblock %}
+{% block main_body -%}
+<section class="container">
+    <header class="page-header">
+        <h4>阳光服务</h4>
+    </header>
+    <article class="col-log-12">
+        <section class="card">
+            <section class="card-body">
+                <h2>详讯，请致电{{corporation.phone}}{% if corporation.mobile %} 或者{{corporation.mobile}}{% endif %}</h2>
+                <h4>网站功能尚在开发中......</h4>
+                <h4>我们公司可以承接以下评估业务:</h4>
+                {% for app in corporation.apps -%}
+                <p>{{app.name}}</p>
+                {%- endfor %}
+            </section>
+        </section>
+    </article>
+</section>
+{%- endblock %}
+{% block inline_script -%}
+<script>
+    $(document).ready(function() {
+        console.log('aaaaaa;')
+        activeMenuItem(1)
+    })
+</script>
+{%- endblock %}
