@@ -12,9 +12,9 @@ def posts(post_type):
 
 @home.route('/', methods=['GET'])
 def index():
-    post = Post.query.order_by(Post.modify_time.desc()).first()
+    posts = Post.query.order_by(Post.modify_time.desc()).limit(3).all()
     corporation = Corporation.query.first_or_404() # TODO the first corporation record
-    return render_template('home/index.html', corporation=corporation, post=post)
+    return render_template('home/index.html', corporation=corporation, posts=posts)
 
 @home.route('/news', methods=['GET'])
 def news():

@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block main_body -%}
+{% for post in posts -%}
     <article class="card">
         <div class="card-body">
-            <h3 class="card-title" id="posts"><i class="newspaper outline icon"></i>{{post.title}}</h3>
-            <p class="card-text">{{post.summary}}</p>
+            <h3 class="card-title"><i class="newspaper outline icon"></i>{{post.title}}</h3>
+            <p class="card-text" style="color: #888888;">{{post.summary}}</p>
         </div>
         <div class="card-footer text-right">
             <a class="btn btn-outline-primary" href="/post?id={{post.id}}">阅读更多</a>
         </div>
     </article>
+{%- endfor %}
 {%- endblock %}
 {% block inline_script -%}
 <script>
@@ -16,7 +18,7 @@
         $('#posts').click(function(e) {
             console.log('id[posts] clicked')
             //window.navigator()
-            window.location.href="/posts"
+            window.location.href="/news"
         })
 
         activeMenuItem(0)
