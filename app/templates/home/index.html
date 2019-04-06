@@ -1,5 +1,312 @@
-{% extends "base.html" %}
-{% block main_body -%}
+<!DOCTYPE html>
+<html>
+<head>
+{% include 'include/head.html' -%}
+</head>
+
+<body>
+<header class="nav-area">
+    <a class="band" href="/">阳光评估</a>
+   <!-- Navigation items that will be collapes and toggle in small viewports -->
+<ul class="nav-list">
+    <li class="nav-item">
+	<a href="/news">咨询</a>
+    </li>
+    <li class="nav-item">
+	<a href="/achievements">业绩</a>
+    </li>
+    <li class="nav-item">
+	<a href="/aboutus">关于我们</a>
+    </li>
+</ul>
+</header>
+<div>
+	<div class="banner">
+	    	<div class="d-flex flex-column banner-item">
+	    		<h1>公正、公平、公开、诚信</h1>
+	    		<p>恪守职业道德，始终自觉加强自律意识，以求真务实的评估价格，客观公正的评估结果，优质高效的评估服务，不断提升服务质量和职业水平</p>
+	    	</div>
+	    	<div class="banner-item">
+			<img src="{{url_for('static', filename='image/banner.png')}}">
+	    	</div>
+	</div>
+<section class="service-area">
+	<div class="d-flex flex-column">
+		<div class="">
+			<h2>我们的服务</h2>
+			<p>我们把每一次的服务视为一种长远关系的奠基石与客户共同成长</p>
+		</div>
+		<div class="service-list">
+			<div class="service-item">
+						<div class="top">
+							<h3>抵押评估</h3>
+						</div>
+						<div class="info">
+							<h4>
+								<span class="package-price" data-monthly="1" data-year="1">
+									<span>1</span>
+								</span>
+								<small>¥</small>
+							</h4>
+							<p><strong>试用至次日</strong>凌晨</p>
+							<p><strong>5G</strong> 流量</p>
+							<p><strong>100M</strong> 带宽</p>
+							<p><strong>不限制</strong> 设备</p>
+						</div>
+						<div class="btm">
+							<a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
+						</div>
+				</div>
+				<li class="wow slideInLeft">
+					<div class="package text-center">
+						<div class="top">
+							<h3>标准版</h3>
+							<h5>￥15 / 月</h5>
+						</div>
+						<div class="info">
+							<h4>
+								<span class="package-price" data-monthly="15" data-year="165">
+									<span>15</span>
+								</span>
+								<small>¥</small>
+							</h4>
+							<p><strong>50G</strong> 月流量 </p>
+							<p><strong>100M</strong> 带宽</p>
+							<p><strong>多条</strong> 线路</p>
+							<p><strong>不限制</strong> 设备</p>
+						</div>
+						<div class="btm">
+							<a href="/cart.php?a=add&amp;pid=10" class="btn btn-border btn-block">订购</a>
+						</div>
+					</div>
+				</li>
+				<li class="wow slideInRight">
+					<div class="package text-center">
+						<div class="top">
+							<h3>旗舰版</h3>
+							<h5>20 / 月</h5>
+						</div>
+						<div class="info">
+							<h4>
+								<span class="package-price" data-monthly="20" data-year="220">
+									<span>20</span>
+								</span>
+								<small>¥</small>
+							</h4>
+						    <p><strong>100G</strong> 月流量</p>
+							<p><strong>100M</strong> 带宽</p>
+							<p><strong>多条国际精品</strong> CN2线路</p>
+							<p><strong>不限制</strong> 设备</p>
+						</div>
+						<div class="btm">
+							<a href="/cart.php?a=add&amp;pid=11" class="btn btn-border btn-block">订购</a>
+						</div>
+					</div>
+				</li>
+				<li class="wow slideInRight">
+					<div class="package text-center">
+						<div class="top">
+							<h3>高级版</h3>
+							<h5>30 / 月</h5>
+						</div>
+						<div class="info">
+							<h4>
+								<span class="package-price" data-monthly="30" data-year="330">
+									<span>30</span>
+								</span>
+								<small>¥</small>
+							</h4>
+							<p><strong>200G</strong> 月流量</p>
+							<p><strong>高带宽</strong> </p>
+							<p><strong>包含所有节点</strong> CN2线路</p>
+							<p><strong>不限制</strong> 设备</p>
+						</div>
+						<div class="btm">
+							<a href="/cart.php?a=add&amp;pid=12" class="btn btn-border btn-block">订购</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="slider-1 space">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<h2>国内国外智能分流加速</h2>
+				<p>自动识别国内外的不同流量，国内外流量分开</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-features space2x">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2 class="title-head">产品特点</h2>
+				<p class="desc">简单，炫酷，简单配置，全平台客户端支持<br>一个账号，多终端多平台同时使用，随时随地呼吸海外新鲜空气，探索更广大的世界</p>
+			</div>
+		</div>
+		<div class="empty_space" style="height: 30px"></div>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="main">
+					<img class="theme-gray size-lg mb1 wow zoomIn" src="/templates/NeWorld-New/assets/img/icons/stroked/v2/icon-loadbalancers.svg" alt="">
+					<h3>纸飞机</h3>
+					<p>轻量级加速工具</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="main">
+					<img class="theme-gray size-lg mb1 wow zoomIn" src="/templates/NeWorld-New/assets/img/icons/stroked/v2/icon-volumes.svg" alt="">
+					<h3>无需断开</h3>
+					<p>客户端保持连接，一次连接无需断开</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="main">
+					<img class="theme-gray size-lg mb1 wow zoomIn" src="/templates/NeWorld-New/assets/img/icons/stroked/v2/icon-firewall.svg" alt="">
+					<h3>大带宽</h3>
+					<p>流畅观看高清视频</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="main">
+					<img class="theme-gray size-lg mb1 wow zoomIn" src="/templates/NeWorld-New/assets/img/icons/stroked/v2/drive.svg" alt="">
+					<h3>多条线路</h3>
+					<p>提供多条线路随时根据需求切换地址</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="slider-2 space2x text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2>世界很大</h2>
+				<p>乡愁是一湾浅浅的海峡
+				<br>我在这头
+				大陆在那头</p>
+				<a href="/cart.php" class="btn btn-success">立刻订购</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-questions space2x border-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h2 class="title-head">问题与回答</h2>
+				<p class="desc">我们的支持团队努力让您的网络体验更加便捷与简单，如果您有任何的问题，欢迎<a href="/contact.php">售前咨询</a></p>
+			</div>
+		</div>
+		<div class="empty_space" style="height: 30px"></div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="main wow fadeInLeft">
+					<h4 class="title-head">拥有哪些国家地区的服务器呢?</h4>
+					<p>目前在：美国，日本，新加坡，台湾，香港 都有服务器，都是精心挑选的线路，
+					持续购入全球更多地区机房的服务器，只要经过测试确认速度够快、连够接稳定的服务器，就会推出上线</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="main wow fadeInRight">
+					<h4 class="title-head">月流量是怎么计算的</h4>
+					<p>目前不限制流量的使用，但是拒绝长时间大带宽的占用，个别线路会有流量限制，访问国内的内容不计入流量</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="main wow fadeInLeft">
+					<h4 class="title-head">什么是智能加速分流？</h4>
+					<p>智能判断国内外流量国内网站全程无需断开连接，
+					智能区分流量，访问国内网站不计入流量</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="main wow fadeInRight">
+					<h4 class="title-head">关于下载?</h4>
+					<p>理论上不限制下载，不过，请不要挂着使用BT，eMule，迅雷等 P2P 工具。或者下载国外盗版内容，将导致服务器被停用，还请谅解</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="main wow fadeInLeft">
+					<h4 class="title-head">关于安全软件?</h4>
+					<p>因为安全软件会收集您的IP和端口反馈,不建议长期打开</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="main wow fadeInRight">
+					<h4 class="title-head">支持退款吗?</h4>
+					<p>开通服务一周内（含购买当天），并且流量使用小于10G可以直接在客户中心请求退款的</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-annom space2x">
+	<div class="container">
+		<div class="row u-mb-small">
+		    <div class="col-8 col-xl-10">
+		        <h1 class="u-h3">最新公告</h1>
+		    </div>
+		</div>
+		
+		<div class="row">
+					        			    <div class="col-md-4">
+			        <article class="c-event">
+			            <div class="c-event__img">
+			                <img src="https://picsum.photos/800/420?image=133" alt="黑色星期五活动30%优惠码">
+			            </div>
+			            <div class="c-event__meta">
+			                <h3 class="c-event__title"><a href="/index.php?rp=/announcements/17/30.html">黑色星期五活动30%优惠码</a> 
+			                    <span class="c-event__place">2018-11-19 18:16:00</span>
+			                </h3>
+			            </div>
+			        </article><!-- // .c-event -->
+			    </div>
+		        		    		        			    <div class="col-md-4">
+			        <article class="c-event">
+			            <div class="c-event__img">
+			                <img src="https://picsum.photos/800/420?image=952" alt="纸飞机网站域名更换">
+			            </div>
+			            <div class="c-event__meta">
+			                <h3 class="c-event__title"><a href="/index.php?rp=/announcements/16">纸飞机网站域名更换</a> 
+			                    <span class="c-event__place">2018-07-03 11:30:00</span>
+			                </h3>
+			            </div>
+			        </article><!-- // .c-event -->
+			    </div>
+		        		    		        			    <div class="col-md-4">
+			        <article class="c-event">
+			            <div class="c-event__img">
+			                <img src="https://picsum.photos/800/420?image=242" alt="续费显示未支付问题">
+			            </div>
+			            <div class="c-event__meta">
+			                <h3 class="c-event__title"><a href="/index.php?rp=/announcements/14">续费显示未支付问题</a> 
+			                    <span class="c-event__place">2018-01-14 15:36:00</span>
+			                </h3>
+			            </div>
+			        </article><!-- // .c-event -->
+			    </div>
+		        		    		</div>
+	</div>
+</section>
+
+            
+    	
+
+
+
+
+
+		</div>
 {% for post in posts -%}
     <article class="card">
         <div class="card-body">
@@ -11,7 +318,6 @@
         </div>
     </article>
 {%- endfor %}
-{%- endblock %}
 {% block inline_script -%}
 <script>
     $(document).ready(function() {
@@ -25,3 +331,5 @@
     })
 </script>
 {%- endblock %}
+</body>
+</html>

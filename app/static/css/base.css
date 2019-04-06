@@ -1,3 +1,95 @@
+body {
+	font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53", sans-serif;
+	min-height: 100%;
+	background-color: #EFF3F6;
+}
+
+.nav-area {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
+	min-width: 100%;
+	padding: 1em 2em;
+	border-bottom: 1px solid transparent;
+	background-color: #12A7DF;
+}
+
+.nav-area .band {
+	flex: 1;
+	color: #fff;
+	font-size: 28px;
+	font-weight: 300;
+	font-family: Raleway;
+	text-decoration: none;
+}
+
+.nav-area .nav-list {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.875rem;
+	font-weight: 400;
+	list-style-type: none;
+	margin-top: 1rem;
+}
+
+@media (max-width: 768px){
+	.nav-area .nav-list {
+		display: none;
+	}
+}
+
+.nav-area .nav-list .nav-item {
+	display: list-item;
+	margin-right: 2.5em;
+}
+
+.nav-area .nav-list .nav-item a {
+	color: #fff;
+}
+
+.banner {
+	display: flex;
+	background-color: #12A7DF;
+	padding: 5em 0;
+	align-items: center;
+}
+
+.banner .banner-item {
+	flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+	.banner {
+		flex-direction: column;
+	}
+}
+
+.banner .banner-item h1 {
+	color: #FFF;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-family: Raleway, sans-serif;
+	text-shadow: 1px 0px 0px rgba(0,0,0,.05);
+}
+
+.banner .banner-item p {
+	color: #FFF;
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom: 2rem;
+}
+
+.banner .banner-item img {
+	max-width: 100%;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
 .my-page {
     display: flex;
     flex-direction: column;
