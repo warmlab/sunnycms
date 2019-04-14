@@ -1,33 +1,17 @@
 {% block footer -%}
-<footer class="footer bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <address class="row" style="margin-bottom: 0">
-                    地址: {{corporation.address}}<br>
-                    电话: {{corporation.phone}} 邮箱: {{corporation.mail}}
-                </address>
-            </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                {{corporation.banner}}
-            </div>
-        </div>
+<footer class="footer">
+  <div class="item">
+    <div class="info">
+      <address>地址: {{corporation.address}}</address>
+      <address>电话: {{corporation.phone}} 邮箱: {{corporation.mail}}</address>
+      <address>{{corporation.accreditation}}</address>
+      <div>Copyright © 2019 <a href="/" target="_self">{{corporation.name}}</a>. All rights reserved.</div>
     </div>
-</footer>
-<footer class="footer bg-dark">
-    <div class="container">
-        <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-lg-auto">
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        {{corporation.accreditation}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                Copyright © 2019 <a href="/">{{corporation.name}}</a>. All rights reserved.
-            </div>
-        </div>
+  </div>
+  <div class="item">
+    <div class="info">
+      {{corporation.banner}}
     </div>
+  </div>
 </footer>
 {%- endblock %}
