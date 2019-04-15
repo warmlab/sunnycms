@@ -8,7 +8,7 @@ from ..models import Corporation, Post, Job
 def posts(post_type):
     corporation = Corporation.query.first_or_404() # TODO the first corporation record
     posts = Post.query.filter_by(type=post_type).order_by(Post.modify_time.desc()).all() # 按日期倒序
-    return render_template('home/posts.html', corporation=corporation, posts=posts)
+    return render_template('home/posts.html', corporation=corporation, posts=posts, index=post_type)
 
 @home.route('/', methods=['GET'])
 def index():

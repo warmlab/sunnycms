@@ -17,98 +17,100 @@
         <a href="/achievements">业绩</a>
       </li>
       <li class="nav-item">
-        <a href="/aboutus">关于我们</a>
+        <a href="/aboutme">关于我们</a>
       </li>
     </ul>
   </header>
-    <div class="banner">
-      <div class="d-flex flex-column banner-item">
-        <h1>公正、公平、公开、诚信</h1>
-        <p>恪守职业道德，始终自觉加强自律意识，以求真务实的评估价格，客观公正的评估结果，优质高效的评估服务，不断提升服务质量和职业水平</p>
+  <div class="banner">
+    <div class="d-flex flex-column banner-item">
+      <h1>公正、公平、公开、诚信</h1>
+      <p>恪守职业道德，始终自觉加强自律意识，以求真务实的评估价格，客观公正的评估结果，优质高效的评估服务，不断提升服务质量和职业水平</p>
+    </div>
+    <div class="banner-item">
+      <img src="{{url_for('static', filename='image/banner.png')}}">
+    </div>
+  </div>
+
+  <section class="service-area">
+    <div class="d-flex flex-column">
+      <div class="area-title">
+        <h2>我们的服务</h2>
+        <p>我们把每一次的服务视为一种长远关系的奠基石与客户共同成长</p>
       </div>
-      <div class="banner-item">
-        <img src="{{url_for('static', filename='image/banner.png')}}">
+      <div class="list">
+        <div class="item">
+          <div class="title">
+            <h3>抵押评估</h3>
+          </div>
+          <div class="info">
+            <p>贷前估价</p>
+            <p>贷后重估</p>
+            <p>押品处置评估</p>
+          </div>
+          <div class="action">
+            <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>房产税收评估</h3>
+          </div>
+          <div class="info">
+            <p>持有环节税收估价</p>
+            <p>交易环节税收估价</p>
+            <p>开发环节税收估价</p>
+          </div>
+          <div class="action">
+            <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>拍卖、变卖评估</h3>
+          </div>
+          <div class="info">
+            <p>司法拍卖估价</p>
+            <p>普通拍卖估价</p>
+            <p>&nbsp;</p>
+          </div>
+          <div class="action">
+            <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="title">
+            <h3>征收、征用评估</h3>
+          </div>
+          <div class="info">
+            <p>国有土地上房屋征收评估</p>
+            <p>集体土地征收评估</p>
+            <p>&nbsp;</p>
+          </div>
+          <div class="action">
+            <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <section class="service-area">
-      <div class="d-flex flex-column">
-        <div class="area-title">
-          <h2>我们的服务</h2>
-          <p>我们把每一次的服务视为一种长远关系的奠基石与客户共同成长</p>
-        </div>
-        <div class="list">
-          <div class="item">
-            <div class="title">
-              <h3>抵押评估</h3>
-            </div>
-            <div class="info">
-              <p>贷前估价</p>
-              <p>贷后重估</p>
-              <p>押品处置评估</p>
-            </div>
-            <div class="action">
-              <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="title">
-              <h3>房产税收评估</h3>
-            </div>
-            <div class="info">
-              <p>持有环节税收估价</p>
-              <p>交易环节税收估价</p>
-              <p>开发环节税收估价</p>
-            </div>
-            <div class="action">
-              <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="title">
-              <h3>拍卖、变卖评估</h3>
-            </div>
-            <div class="info">
-              <p>司法拍卖估价</p>
-              <p>普通拍卖估价</p>
-              <p>&nbsp;</p>
-            </div>
-            <div class="action">
-              <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="title">
-              <h3>征收、征用评估</h3>
-            </div>
-            <div class="info">
-              <p>国有土地上房屋征收评估</p>
-              <p>集体土地征收评估</p>
-              <p>&nbsp;</p>
-            </div>
-            <div class="action">
-              <a href="/appraisal?type=1" class="btn btn-border btn-block">查看详细信息</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-area" style="background-color: #14a7db">
-      <div class="d-flex flex-column">
-        <div class="area-title">
+  <section class="service-area" style="background-color: #14a7db">
+    <div class="d-flex flex-column">
+      <div class="area-title">
         <h2 style="color: #fff;margin-top:1rem;">合作机构</h2>
-        <p style="color: #e0e0e0;padding: 0 20%;">公司与工商银行、恒丰银行、华夏银行、建设银行、烟台农商银行、民生银行、渤海银行、光大银行、兴业银行、龙口农商银行、青岛农商银行、潍坊银行、浙商银行、德州银行等各商业银行开展业务合作、信息共享、互通有无。
+        <p style="color: #e0e0e0;padding: 0 20%;">
+          公司与工商银行、恒丰银行、华夏银行、建设银行、烟台农商银行、民生银行、渤海银行、光大银行、兴业银行、龙口农商银行、青岛农商银行、潍坊银行、浙商银行、德州银行等各商业银行开展业务合作、信息共享、互通有无。
           公司已入选山东法院委托评估、拍卖机构备案名录，入围烟台市中级人民法院、芝罘区人民法院、开发区人民法院、莱阳市人民法院、牟平区人民法院、高新区人民法院、莱山区人民法院、蓬莱市人民法院、栖霞市人民法院、长岛县人民法院等12家烟台基层法院。
           公司已入选烟台海洋产权交易中心司法询价机构库，省内外涉案标的均可询价。</p>
-      </div></div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="service-area">
-      <div class="d-flex flex-column">
-          <div class="area-title">
-            <h2>最新公告</h2>
-          </div>
+  <section class="service-area">
+    <div class="d-flex flex-column">
+      <div class="area-title">
+        <h2>最新公告</h2>
+      </div>
       <div class="list">
         {% for post in posts -%}
         <article class="item">
@@ -124,9 +126,9 @@
         </article>
         {%- endfor %}
       </div>
-      </div>
-    </section>
-    {% include 'include/footer.html' -%}
+    </div>
+  </section>
+  {% include 'include/footer.html' -%}
   {% block inline_script -%}
   <script>
     $(document).ready(function () {

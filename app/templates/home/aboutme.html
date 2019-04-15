@@ -3,10 +3,17 @@
 {% block banner -%}
 {%- endblock %}
 {% block main_body -%}
-    <section class="ui vertical stripe segment">
-        <div class="ui text container">
-            <h3 class="ui header"><i class="user outline icon"></i>{{corporation.name}}</h3>
-            <p>{% if corporation.note %}{{corporation.note|safe}}{% endif %}</p>
-        </div>
-    </section>
+<section class="ui vertical stripe segment">
+  <div class="ui text container">
+    <h3 class="ui header"><i class="user outline icon"></i>{{corporation.name}}</h3>
+    <p>{% if corporation.note %}{{corporation.note|safe}}{% endif %}</p>
+  </div>
+</section>
+{%- endblock %}
+{%- block inline_script %}
+<script>
+  $(document).ready(function () {
+    activeMenuItem(3)
+  })
+</script>
 {%- endblock %}
